@@ -10,17 +10,21 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
   const tl = gsap.timeline();
   useGSAP(() => {
-    tl.from([".navbar h1", ".navbar img", ".navbar li", ".navbar button",], {
+    tl.from([".navbar h1", ".navbar img", ".navbar li", ".navbar button"], {
       y: -50,
       opacity: 0,
       stagger: 0.1,
     });
-    tl.from([".part1 h1", ".part1 p"], {
-      x: -100,
-      opacity: 0,
-      duration: 0.5,
-      stagger: 0.2,
-    },"-=0.5");
+    tl.from(
+      [".part1 h1", ".part1 p"],
+      {
+        x: -100,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.2,
+      },
+      "-=0.5"
+    );
     tl.from(".part1 button", {
       opacity: 0,
     });
