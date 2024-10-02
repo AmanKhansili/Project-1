@@ -20,7 +20,7 @@ const Services = () => {
           >
             <div className="flex flex-col justify-between">
               <h2 className={`text-[2rem] w-[60%]`}>{value.title}</h2>
-              <h1 className="flex items-center text-[1rem] gap-[10px]">
+              <h1 className="flex items-center text-[1rem] gap-[10px] cursor-pointer">
                 <img src={Img} alt="img" className={value.invert} />
                 <p>{value.subtitle}</p>
               </h1>

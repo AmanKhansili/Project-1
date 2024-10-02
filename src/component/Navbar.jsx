@@ -12,7 +12,7 @@ const Navbar = () => {
       right: 0,
       duration: 0.5,
     });
-  });
+  }, []);
   tl3.pause();
   const handleMouseEnter = () => {
     tl3.play();
@@ -27,46 +27,46 @@ const Navbar = () => {
         <div>
           <ul className="hidden lg:flex flex-row items-center justify-center gap-[3vw] text-[1.2rem] font-medium">
             <li>
-              <a href="">About us</a>
+              <p>About us</p>
             </li>
             <li>
-              <a href="">Services</a>
+              <p>Services</p>
             </li>
             <li>
-              <a href="">Use Cases</a>
+              <p>Use Cases</p>
             </li>
             <li>
-              <a href="">Pricing</a>
+              <p>Pricing</p>
             </li>
             <li>
-              <a href="">Blog</a>
+              <p>Blog</p>
             </li>
             <button className="border-solid rounded-xl p-4 ring-2">
               Request a quote
             </button>
           </ul>
         </div>
-        <div className="hamburger flex lg:hidden">
+        <div className="hamburger flex lg:hidden cursor-pointer">
           <img src={Open} alt="" onClick={handleMouseEnter} />
           <div
-            className="absolute top-0 -right-full w-1/2 h-full z-10 px-[5vw] py-[5vw] bg-slate-300 flex flex-row justify-around items-start"
+            className="absolute top-0 -right-full w-1/2 h-full z-10 px-[5vw] py-[5vw] backdrop-blur-xl flex flex-row justify-around items-start"
             ref={ref}
           >
-            <ul className="font-semibold text-[5vw] text-[#434341] flex flex-col items-start relative top-[10%] gap-[2.5rem]">
+            <ul className="font-semibold text-[5vw] flex flex-col items-start relative top-[10%] gap-[2.5rem]">
               <li>
-                <a href="">About us</a>
+                <p>About us</p>
               </li>
               <li>
-                <a href="">Services</a>
+                <p>Services</p>
               </li>
               <li>
-                <a href="">Use Cases</a>
+                <p>Use Cases</p>
               </li>
               <li>
-                <a href="">Pricing</a>
+                <p>Pricing</p>
               </li>
               <li>
-                <a href="">Blog</a>
+                <p>Blog</p>
               </li>
               <button className="border-solid rounded-xl p-2 mt-2 ring-2">
                 Request a quote
